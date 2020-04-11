@@ -4,46 +4,44 @@
   $noProcNotZero: $size > 0
 
   @media (min-width: $size)
-    #{$scope-selector}
-      #{str-fe('.col<name>', $name, $noProcNotZero)}
-        &, &-auto, &-grow, &-shrink
-          .row > &, .flex > &
-            width: auto
-            min-width: 0
-            max-width: 100%
-            .column > &, .flex > &
-              height: auto
-              min-height: 0
-              max-height: 100%
-          &
-            flex: 10000 1 0%
-          &-auto
-            flex: 0 0 auto
-          &-grow
-            flex: 1 0 auto
-          &-shrink
-            flex: 0 1 auto
+    #{str-fe('.col<name>', $name, $noProcNotZero)}
+      &, &-auto, &-grow, &-shrink
+        #{$scope-selector} .row > &, #{$scope-selector} .flex > &
+          width: auto
+          min-width: 0
+          max-width: 100%
+          #{$scope-selector} .column > &, #{$scope-selector} .flex > &
+            height: auto
+            min-height: 0
+            max-height: 100%
+        #{$scope-selector} &
+          flex: 10000 1 0%
+        #{$scope-selector} &-auto
+          flex: 0 0 auto
+        #{$scope-selector} &-grow
+          flex: 1 0 auto
+        #{$scope-selector} &-shrink
+          flex: 0 1 auto
 
     @for $i from 0 through $flex-cols
       $ic: quote('' + $i)
-      #{$scope-selector}
-        #{str-fe('.col<name>-<i>', $name, $noProcNotZero, $ic)}
-          @extend .col#{$name}-auto
-        .row
-          #{str-fe('> .col<name>-<i>', $name, $noProcNotZero, $ic)}
-            height: auto
-            width: toFixed(percentage($i / $flex-cols), 10000)
-          @if $i != 0 or $name != ''
-            #{str-fe('> .offset<name>-<i>', $name, $noProcNotZero, $ic)}
-              margin-left: toFixed(percentage($i / $flex-cols), 10000)
-        .column
-          #{str-fe('> .col<name>-<i>', $name, $noProcNotZero, $ic)}
-            height: toFixed(percentage($i / $flex-cols), 10000)
-            width: auto
-        @if $size == 0 and $i == $flex-cols
-          .row > .col-all
-            height: auto
-            flex: 0 0 100%
+      #{str-fe('.col<name>-<i>', $name, $noProcNotZero, $ic)}
+        @extend .col#{$name}-auto
+      #{$scope-selector} .row
+        #{str-fe('> .col<name>-<i>', $name, $noProcNotZero, $ic)}
+          height: auto
+          width: toFixed(percentage($i / $flex-cols), 10000)
+        @if $i != 0 or $name != ''
+          #{str-fe('> .offset<name>-<i>', $name, $noProcNotZero, $ic)}
+            margin-left: toFixed(percentage($i / $flex-cols), 10000)
+      #{$scope-selector} .column
+        #{str-fe('> .col<name>-<i>', $name, $noProcNotZero, $ic)}
+          height: toFixed(percentage($i / $flex-cols), 10000)
+          width: auto
+      @if $size == 0 and $i == $flex-cols
+        #{$scope-selector} .row > .col-all
+          height: auto
+          flex: 0 0 100%
 
 #{$scope-selector}
   .row, .column, .flex
@@ -157,5 +155,5 @@
         @extend .q-col-gutter-x-#{$name}
         @extend .q-col-gutter-y-#{$name}
 
-  @each $name, $size in $sizes
-    @include fg("-" + $name, $size)
+@each $name, $size in $sizes
+  @include fg("-" + $name, $size)
