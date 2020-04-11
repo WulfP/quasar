@@ -16,8 +16,10 @@ $scope-selector : 'div.q-scope'
   font-smoothing: antialiased
   line-height: $body-line-height
   font-size: $body-font-size
-  @import './normalize.sass'
 
+@import './normalize.sass'
+
+#{$scope-selector}
   @import '../components/icon/QIcon.sass'
 
   /* Mixins */
