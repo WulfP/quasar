@@ -1,5 +1,5 @@
 <template>
-  <div id="q-app" class="q-scope">
+  <div id="q-app" class="q-scope q-scope-base">
     <router-view />
 
     <q-btn to="/" round icon="home" dense size="xs" class="fixed dev-home-btn z-max" color="accent" />
@@ -105,6 +105,7 @@ export default {
     ]
   },
   mounted () {
+    this.$q.scope = "q-scope"
     window.$q = this.$q
     window.Quasar = Quasar
     /*

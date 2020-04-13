@@ -165,6 +165,10 @@ export function setPosition (cfg) {
   if (cfg.el.scrollLeft !== scrollLeft) {
     cfg.el.scrollLeft = scrollLeft
   }
+
+  cfg.el.style.width = "initial" // overwrite normalize.sass
+
+  console.log("Style", cfg.el.style, "Style.width", cfg.el.style.width)
 }
 
 function applyBoundaries (props, anchorProps, targetProps, anchorOrigin, selfOrigin) {

@@ -3,18 +3,20 @@
  */
 
 #{$scope-selector}
-  *, *:before, *:after // @stylint ignore
-    box-sizing: inherit
-    -webkit-tap-highlight-color: transparent
-    -moz-tap-highlight-color: transparent
+*, *:before, *:after // @stylint ignore
+  box-sizing: inherit
+  -webkit-tap-highlight-color: transparent
+  -moz-tap-highlight-color: transparent
 
 #{$scope-selector}
   width: 100%
   direction: ltr
+
 // https://stackoverflow.com/a/23083463
-#{$scope-selector}.platform-ios.within-iframe, #{$scope-selector}.platform-ios.within-iframe #q-app
+body.platform-ios.within-iframe #{$scope-selector},
   width: 100px
   min-width: 100%
+
 #{$scope-selector}
   margin: 0
   box-sizing: border-box

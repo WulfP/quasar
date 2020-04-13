@@ -1,13 +1,20 @@
-$scope-selector : 'div.q-scope'
+// To check: + & in sass-files, see QBanner.sass
+// TODO: Notify
+
+$scope-selector : '.q-scope'
+// $scope-selector-base : #{$scope-selector} + "-base"
+$scope-selector-base : '.q-scope-base'
 
 @import './variables.sass'
 
 @import './core/colorVars.sass'
 @import './core/sizeVars.sass'
 
-#{$scope-selector}
+#{$scope-selector-base}
   min-width: 100px
   min-height: 100%
+
+#{$scope-selector}
   font-family: $typography-font-family
   -ms-text-size-adjust: 100%
   -webkit-text-size-adjust: 100%
@@ -17,7 +24,7 @@ $scope-selector : 'div.q-scope'
   line-height: $body-line-height
   font-size: $body-font-size
 
-@import './normalize.sass'
+@import './normalize.sass' // scoped
 
 #{$scope-selector}
   @import '../components/icon/QIcon.sass'
@@ -60,7 +67,10 @@ $scope-selector : 'div.q-scope'
   @import '../components/knob/QKnob.sass'
   @import '../components/layout/QLayout.sass'
   @import '../components/linear-progress/QLinearProgress.sass'
-  @import '../components/menu/QMenu.sass'
+
+@import '../components/menu/QMenu.sass' // scoped
+
+#{$scope-selector}
   @import '../components/option-group/QOptionGroup.sass'
   @import '../components/pagination/QPagination.sass'
   @import '../components/parallax/QParallax.sass'
@@ -104,19 +114,23 @@ $scope-selector : 'div.q-scope'
   @import './core/colors.sass'
   @import './core/elevation.sass'
 
-@import './core/flex.sass'
+@import './core/flex.sass' // scoped
 
 #{$scope-selector}
   @import './core/helpers.sass'
   @import './core/mouse.sass'
   @import './core/orientation.sass'
-  @import './core/positioning.sass'
+
+@import './core/positioning.sass' // scoped
+
+#{$scope-selector}
   @import './core/size.sass'
   @import './core/touch.sass'
   @import './core/transitions.sass'
-  @import './core/typography.sass'
 
-@import './core/visibility.sass'
+#{$scope-selector}
+  @import './core/typography.sass'
+  @import './core/visibility.sass'
 
 #{$scope-selector}
   @import './core/dark.sass'
