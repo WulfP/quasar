@@ -32,7 +32,7 @@ const transitions = {
 export default Vue.extend({
   name: 'QDialog',
 
-  mixins: [ HistoryMixin, ModelToggleMixin, PortalMixin, PreventScrollMixin ],
+  mixins: [HistoryMixin, ModelToggleMixin, PortalMixin, PreventScrollMixin],
 
   props: {
     persistent: Boolean,
@@ -316,7 +316,7 @@ export default Vue.extend({
       }
 
       return h('div', {
-        staticClass: 'q-dialog fullscreen no-pointer-events',
+        staticClass: 'q-dialog q-scope fullscreen no-pointer-events',
         class: this.contentClass,
         style: this.contentStyle,
         attrs: this.$attrs
