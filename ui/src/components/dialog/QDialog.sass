@@ -73,10 +73,10 @@
 
 // addressbar always gets shown, so need to slim this down
 body.platform-ios, body.platform-android:not(.native-mobile)
-  .q-dialog__inner--minimized > div
+  #{$scope-selector} .q-dialog__inner--minimized > div
     max-height: calc(100vh - 108px)
 
-body.q-ios-padding .q-dialog__inner
+body.q-ios-padding #{$scope-selector} .q-dialog__inner
   padding-top: $ios-statusbar-height !important
   padding-top: env(safe-area-inset-top) !important
   padding-bottom: env(safe-area-inset-bottom) !important
@@ -84,7 +84,7 @@ body.q-ios-padding .q-dialog__inner
     max-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom)) !important
 
 @media (max-width: $breakpoint-xs-max)
-  .q-dialog__inner
+  #{$scope-selector} .q-dialog__inner
     &--top, &--bottom
       padding-left: 0
       padding-right: 0
@@ -93,8 +93,8 @@ body.q-ios-padding .q-dialog__inner
         width: 100% !important
 
 @media (min-width: $breakpoint-sm-min)
-  .q-dialog__inner--minimized > div
+  #{$scope-selector} .q-dialog__inner--minimized > div
     max-width: 560px
 
-.q-body--dialog
+#{$scope-selector} .q-body--dialog
   overflow: hidden
