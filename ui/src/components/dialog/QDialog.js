@@ -316,7 +316,7 @@ export default Vue.extend({
       }
 
       return h('div', {
-        staticClass: 'q-dialog q-scope fullscreen no-pointer-events',
+        staticClass: `q-dialog fullscreen no-pointer-events ${this.$q.config.scope || ''}`.trim(),
         class: this.contentClass,
         style: this.contentStyle,
         attrs: this.$attrs
