@@ -1,14 +1,14 @@
 @each $heading, $value in $h-tags
-  #{$heading}
+  #{$scope-selector} #{$heading}
     font-size: map-get($value, "size")
     font-weight: map-get($value, "weight")
     line-height: map-get($value, "line-height")
     letter-spacing: map-get($value, "letter-spacing")
 
-p
+#{$scope-selector} p
   margin: 0 0 map-get(map-get($spaces, "md"), "y")
 
-.text-
+#{$scope-selector} .text-
   @each $heading, $value in $headings
     &#{$heading}
       font-size: map-get($value, "size")
@@ -48,11 +48,11 @@ p
     &weight-#{$weight}
       font-weight: $value
 
-small
+#{$scope-selector} small
   font-size: 80%
-big
+#{$scope-selector} big
   font-size: 170%
-sub
+#{$scope-selector} sub
   bottom: -.25em
-sup
+#{$scope-selector} sup
   top: -.5em
