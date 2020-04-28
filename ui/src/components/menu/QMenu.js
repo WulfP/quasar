@@ -292,7 +292,7 @@ export default Vue.extend({
       }, [
         this.showing === true ? h('div', {
           ref: 'inner',
-          staticClass: `q-menu q-position-engine scroll ${$q.scope}` + this.menuClass,
+          staticClass: `q-menu q-position-engine scroll ${this.$q.config.scope || ''}`.trim(),
           class: this.contentClass,
           style: this.contentStyle,
           attrs: {
