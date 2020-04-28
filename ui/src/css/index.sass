@@ -25,10 +25,9 @@ $scope-selector-base : '.q-scope-base' !default
   font-size: $body-font-size
 
 @import './normalize.sass' // scoped
+@import '../components/icon/QIcon.sass' // scoped
 
 #{$scope-selector}
-  @import '../components/icon/QIcon.sass'
-
   /* Mixins */
   @import '../mixins/panel.sass'
 
@@ -128,12 +127,11 @@ $scope-selector-base : '.q-scope-base' !default
   @import './core/touch.sass'
   @import './core/transitions.sass'
 
-@import './core/typography.sass'
-#{$scope-selector}
-  @import './core/visibility.sass'
+@import './core/typography.sass' // scoped
+@import './core/visibility.sass' // scoped
+
+@import './core/dark.sass' // scoped
 
 #{$scope-selector}
-  @import './core/dark.sass'
-
   /* IE Compat */
   @import '../ie-compat/ie.sass'
