@@ -1,8 +1,8 @@
-.q-markup-table
+#{$scope-selector} .q-markup-table
   overflow: auto
   background: #fff
 
-.q-table
+#{$scope-selector}  .q-table
   width: 100%
   max-width: 100%
   border-collapse: separate
@@ -178,102 +178,104 @@
 /*
  * Separators
  */
-.q-table--horizontal-separator, .q-table--cell-separator
-  thead th, tbody tr:not(:last-child) td
-    border-bottom-width: 1px
+#{$scope-selector}
+  .q-table--horizontal-separator, .q-table--cell-separator
+    thead th, tbody tr:not(:last-child) td
+      border-bottom-width: 1px
 
-.q-table--vertical-separator, .q-table--cell-separator
-  td, th
-    border-left-width: 1px
-  thead tr:last-child th,
-  &.q-table--loading tr:nth-last-child(2) th
-    border-bottom-width: 1px
-  td:first-child, th:first-child
-    border-left: 0
-  .q-table__top
-    border-bottom: 1px solid $table-border-color
+  .q-table--vertical-separator, .q-table--cell-separator
+    td, th
+      border-left-width: 1px
+    thead tr:last-child th,
+    &.q-table--loading tr:nth-last-child(2) th
+      border-bottom-width: 1px
+    td:first-child, th:first-child
+      border-left: 0
+    .q-table__top
+      border-bottom: 1px solid $table-border-color
 
-/*
- * dense size
- */
+  /*
+   * dense size
+   */
 
-.q-table--dense
-  .q-table__top
-    padding: 6px 16px
-  .q-table__bottom
-    min-height: 33px
+  .q-table--dense
+    .q-table__top
+      padding: 6px 16px
+    .q-table__bottom
+      min-height: 33px
 
-  .q-table__sort-icon
-    font-size: 110%
-  .q-table
-    th, td
-      padding: 4px 8px
-    thead tr, tbody tr, tbody td
-      height: 28px
-    th:first-child, td:first-child
-      padding-left: 16px
-    th:last-child, td:last-child
-      padding-right: 16px
+    .q-table__sort-icon
+      font-size: 110%
+    .q-table
+      th, td
+        padding: 4px 8px
+      thead tr, tbody tr, tbody td
+        height: 28px
+      th:first-child, td:first-child
+        padding-left: 16px
+      th:last-child, td:last-child
+        padding-right: 16px
 
-  .q-table__bottom-item
-    margin-right: 8px
+    .q-table__bottom-item
+      margin-right: 8px
 
-  .q-table__select
-    .q-field__control, .q-field__native
-      min-height: 24px
-      padding: 0
-    .q-field__marginal
-      height: 24px
+    .q-table__select
+      .q-field__control, .q-field__native
+        min-height: 24px
+        padding: 0
+      .q-field__marginal
+        height: 24px
 
-/*
- * On light background
- */
-.q-table__bottom // @stylint ignore
-  border-top: 1px solid $table-border-color
+  /*
+   * On light background
+   */
+  .q-table__bottom // @stylint ignore
+    border-top: 1px solid $table-border-color
 
-.q-table // @stylint ignore
-  thead, tr, th, td
-    border-color: $table-border-color
+  .q-table // @stylint ignore
+    thead, tr, th, td
+      border-color: $table-border-color
 
-  tbody
-    td
-      position: relative
-      &:before, &:after
-        position: absolute
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        pointer-events: none
-      &:before
-        background: $table-hover-background
-      &:after
-        background: $table-selected-background
+    tbody
+      td
+        position: relative
+        &:before, &:after
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          pointer-events: none
+        &:before
+          background: $table-hover-background
+        &:after
+          background: $table-selected-background
 
-    tr.selected td:after
-      content: ''
+      tr.selected td:after
+        content: ''
 
-body.desktop .q-table > tbody > tr:not(.q-tr--no-hover):hover > td:not(.q-td--no-hover):before
-  content: ''
+body.desktop #{$scope-selector} .q-table > tbody > tr:not(.q-tr--no-hover):hover > td:not(.q-td--no-hover):before
+    content: ''
 
-/*
- * On dark background
- */
-.q-table__card--dark, .q-table--dark
-  border-color: $table-dark-border-color
-
-.q-table--dark
-
-  .q-table__bottom, thead, tr, th, td
+#{$scope-selector}
+  /*
+   * On dark background
+   */
+  .q-table__card--dark, .q-table--dark
     border-color: $table-dark-border-color
 
-  tbody
-    td
-      &:before
-        background: $table-dark-hover-background
-      &:after
-        background: $table-dark-selected-background
+  .q-table--dark
 
-  &.q-table--vertical-separator, &.q-table--cell-separator
-    .q-table__top
+    .q-table__bottom, thead, tr, th, td
       border-color: $table-dark-border-color
+
+    tbody
+      td
+        &:before
+          background: $table-dark-hover-background
+        &:after
+          background: $table-dark-selected-background
+
+    &.q-table--vertical-separator, &.q-table--cell-separator
+      .q-table__top
+        border-color: $table-dark-border-color

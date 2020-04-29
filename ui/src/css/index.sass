@@ -1,5 +1,5 @@
 // To check: + & in sass-files, see QBanner.sass
-// TODO: Notify
+// TODO: alles Dateien mit keyframe und body checken!
 
 $scope-selector : '.q-scope' !default
 // $scope-selector-base : #{$scope-selector} + "-base"
@@ -27,111 +27,103 @@ $scope-selector-base : '.q-scope-base' !default
 @import './normalize.sass' // scoped
 @import '../components/icon/QIcon.sass' // scoped
 
-#{$scope-selector}
-  /* Mixins */
-  @import '../mixins/panel.sass'
+/* Mixins */
+@import '../mixins/panel.sass' // scoped
 
-  /* Components */
-  @import '../components/ajax-bar/QAjaxBar.sass'
-  @import '../components/avatar/QAvatar.sass'
-  @import '../components/badge/QBadge.sass'
-  @import '../components/banner/QBanner.sass'
-  @import '../components/bar/QBar.sass'
-  @import '../components/breadcrumbs/QBreadcrumbs.sass'
-  @import '../components/btn/QBtn.sass'
-  @import '../components/btn-dropdown/QBtnDropdown.sass'
-  @import '../components/btn-group/QBtnGroup.sass'
-  @import '../components/card/QCard.sass'
-  @import '../components/carousel/QCarousel.sass'
-  @import '../components/chat/QChatMessage.sass'
-  @import '../components/checkbox/QCheckbox.sass'
-  @import '../components/chip/QChip.sass'
-  @import '../components/circular-progress/QCircularProgress.sass'
-  @import '../components/color/QColor.sass'
-  @import '../components/date/QDate.sass'
-  @import '../components/dialog/QDialog.sass'
-  @import '../components/dialog-bottom-sheet/BottomSheet.sass'
-  @import '../components/dialog-plugin/DialogPlugin.sass'
-  @import '../components/editor/QEditor.sass'
-  @import '../components/expansion-item/QExpansionItem.sass'
-  @import '../components/fab/QFab.sass'
-  @import '../components/field/QField.sass'
-  @import '../components/file/QFile.sass'
-  @import '../components/form/QForm.sass'
-  @import '../components/img/QImg.sass'
-  @import '../components/inner-loading/QInnerLoading.sass'
-  @import '../components/input/QInput.sass'
-  @import '../components/intersection/QIntersection.sass'
-  @import '../components/item/QItem.sass'
-  @import '../components/knob/QKnob.sass'
-  @import '../components/layout/QLayout.sass'
-  @import '../components/linear-progress/QLinearProgress.sass'
-
+/* Components */
+@import '../components/ajax-bar/QAjaxBar.sass' // scoped
+@import '../components/avatar/QAvatar.sass' // scoped
+@import '../components/badge/QBadge.sass' // scoped
+@import '../components/banner/QBanner.sass' // scoped
+@import '../components/bar/QBar.sass' // scoped
+@import '../components/breadcrumbs/QBreadcrumbs.sass' // scoped
+@import '../components/btn/QBtn.sass' // scoped
+@import '../components/btn-dropdown/QBtnDropdown.sass' // scoped
+@import '../components/btn-group/QBtnGroup.sass' // scoped
+@import '../components/card/QCard.sass' // scoped
+@import '../components/carousel/QCarousel.sass' // scoped
+@import '../components/chat/QChatMessage.sass' // scoped
+@import '../components/checkbox/QCheckbox.sass' // scoped
+@import '../components/chip/QChip.sass' // scoped
+@import '../components/circular-progress/QCircularProgress.sass' // scoped
+@import '../components/color/QColor.sass' // scoped
+@import '../components/date/QDate.sass' // scoped
+@import '../components/dialog/QDialog.sass' // scoped
+@import '../components/dialog-bottom-sheet/BottomSheet.sass' // scoped
+@import '../components/dialog-plugin/DialogPlugin.sass' // scoped
+@import '../components/editor/QEditor.sass' // scoped
+@import '../components/expansion-item/QExpansionItem.sass' // scoped
+@import '../components/fab/QFab.sass' // scoped
+@import '../components/field/QField.sass' // scoped
+@import '../components/file/QFile.sass' // scoped
+@import '../components/form/QForm.sass' // scoped
+@import '../components/img/QImg.sass' // scoped
+@import '../components/inner-loading/QInnerLoading.sass' // scoped
+@import '../components/input/QInput.sass' // scoped
+@import '../components/intersection/QIntersection.sass' // scoped
+@import '../components/item/QItem.sass' // scoped
+@import '../components/knob/QKnob.sass' // sass
+@import '../components/layout/QLayout.sass' // scoped
+@import '../components/linear-progress/QLinearProgress.sass' // scoped
 @import '../components/menu/QMenu.sass' // scoped
+@import '../components/option-group/QOptionGroup.sass' // scoped
+@import '../components/pagination/QPagination.sass' // scoped
+@import '../components/parallax/QParallax.sass' // scoped
+@import '../components/popup-edit/QPopupEdit.sass' // scoped
+@import '../components/pull-to-refresh/QPullToRefresh.sass' // scoped
+@import '../components/radio/QRadio.sass' // scoped
+@import '../components/rating/QRating.sass' // scoped
+@import '../components/responsive/QResponsive.sass' // scoped
+@import '../components/scroll-area/QScrollArea.sass' // scoped
+@import '../components/select/QSelect.sass' // scoped
+@import '../components/separator/QSeparator.sass' // scoped
+@import '../components/skeleton/QSkeleton.sass' // scoped
+@import '../components/slide-item/QSlideItem.sass' // scoped
+@import '../components/slider/QSlider.sass' // scoped
+@import '../components/space/QSpace.sass' // scoped
+@import '../components/spinner/QSpinner.sass' // scoped
+@import '../components/splitter/QSplitter.sass' // scoped
+@import '../components/stepper/QStepper.sass' // scoped
+@import '../components/tab-panels/QTabPanel.sass' // scoped
+@import '../components/table/QTable.sass' // scoped
+@import '../components/tabs/QTabs.sass' // scoped
+@import '../components/time/QTime.sass' // scoped
+@import '../components/timeline/QTimeline.sass' // scoped
+@import '../components/toggle/QToggle.sass' // scoped
+@import '../components/toolbar/QToolbar.sass' // scoped
+@import '../components/tooltip/QTooltip.sass'  // scoped
+@import '../components/tree/QTree.sass' // scoped
+@import '../components/uploader/QUploader.sass' // scoped
+@import '../components/video/QVideo.sass' // scoped
+@import '../components/virtual-scroll/QVirtualScroll.sass' // scoped
 
-#{$scope-selector}
-  @import '../components/option-group/QOptionGroup.sass'
-  @import '../components/pagination/QPagination.sass'
-  @import '../components/parallax/QParallax.sass'
-  @import '../components/popup-edit/QPopupEdit.sass'
-  @import '../components/pull-to-refresh/QPullToRefresh.sass'
-  @import '../components/radio/QRadio.sass'
-  @import '../components/rating/QRating.sass'
-  @import '../components/responsive/QResponsive.sass'
-  @import '../components/scroll-area/QScrollArea.sass'
-  @import '../components/select/QSelect.sass'
-  @import '../components/separator/QSeparator.sass'
-  @import '../components/skeleton/QSkeleton.sass'
-  @import '../components/slide-item/QSlideItem.sass'
-  @import '../components/slider/QSlider.sass'
-  @import '../components/space/QSpace.sass'
-  @import '../components/spinner/QSpinner.sass'
-  @import '../components/splitter/QSplitter.sass'
-  @import '../components/stepper/QStepper.sass'
-  @import '../components/tab-panels/QTabPanel.sass'
-  @import '../components/table/QTable.sass'
-  @import '../components/tabs/QTabs.sass'
-  @import '../components/time/QTime.sass'
-  @import '../components/timeline/QTimeline.sass'
-  @import '../components/toggle/QToggle.sass'
-  @import '../components/toolbar/QToolbar.sass'
-  @import '../components/tooltip/QTooltip.sass'
-  @import '../components/tree/QTree.sass'
-  @import '../components/uploader/QUploader.sass'
-  @import '../components/video/QVideo.sass'
-  @import '../components/virtual-scroll/QVirtualScroll.sass'
+/* Directives */
+@import '../directives/Ripple.sass' // scoped
 
-  /* Directives */
-  @import '../directives/Ripple.sass'
+/* Plugins */
+@import '../plugins/Loading.sass' // scoped
+@import '../plugins/Notify.sass' // scoped
 
-  /* Plugins */
-  @import '../plugins/Loading.sass'
-  @import '../plugins/Notify.sass'
-
-  /* Core */
-  @import './core/animations.sass'
-  @import './core/colors.sass'
-  @import './core/elevation.sass'
+/* Core */
+@import './core/animations.sass' // scoped
+@import './core/colors.sass' // scoped
+@import './core/elevation.sass' // scoped
 
 @import './core/flex.sass' // scoped
 
-#{$scope-selector}
-  @import './core/helpers.sass'
-  @import './core/mouse.sass'
-  @import './core/orientation.sass'
+@import './core/helpers.sass' // scoped
+@import './core/mouse.sass' // scoped
+@import './core/orientation.sass' // scoped
 
 @import './core/positioning.sass' // scoped
 
-#{$scope-selector}
-  @import './core/size.sass'
-  @import './core/touch.sass'
-  @import './core/transitions.sass'
+@import './core/size.sass' // scoped
+@import './core/touch.sass' // scoped
+@import './core/transitions.sass' // scoped
 
 @import './core/typography.sass' // scoped
 @import './core/visibility.sass' // scoped
-
 @import './core/dark.sass' // scoped
 
-#{$scope-selector}
-  /* IE Compat */
-  @import '../ie-compat/ie.sass'
+/* IE Compat */
+@import '../ie-compat/ie.sass' // scoped

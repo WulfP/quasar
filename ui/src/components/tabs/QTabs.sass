@@ -1,4 +1,4 @@
-.q-tab
+#{$scope-selector} .q-tab
   padding: 0 16px
   min-height: 48px
   transition: color .3s, background-color .3s
@@ -64,7 +64,7 @@
   &--inactive
     opacity: .85
 
-.q-tabs
+#{$scope-selector} .q-tabs
   position: relative
   transition: color .3s, background-color .3s
 
@@ -160,7 +160,7 @@
         min-height: 52px
 
 body.mobile
-  .q-tabs
+  #{$scope-selector} .q-tabs
 
     &__content
       overflow: auto
@@ -169,6 +169,6 @@ body.mobile
       display: none
 
 @media (min-width: $breakpoint-lg-min)
-  .q-header, .q-footer
+  #{$scope-selector} .q-header, #{$scope-selector} .q-footer
     .q-tab__content
       min-width: 128px

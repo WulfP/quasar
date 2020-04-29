@@ -1,6 +1,6 @@
 $chip-height: 2em
 
-.q-chip
+#{$scope-selector} .q-chip
   vertical-align: middle
   border-radius: 16px
   outline: 0
@@ -79,5 +79,5 @@ $chip-height: 2em
     .q-avatar
       border-radius: ($generic-border-radius - 1px) 0 0 ($generic-border-radius - 1px)
 
-body.desktop .q-chip--clickable:focus
+body.desktop #{$scope-selector} .q-chip--clickable:focus
   box-shadow: $shadow-1

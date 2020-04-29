@@ -1,6 +1,6 @@
 $toggle-transition: .22s cubic-bezier(.4,0,.2,1)
 
-.q-toggle
+#{$scope-selector} .q-toggle
   vertical-align: middle
 
   &__native
@@ -104,7 +104,7 @@ $toggle-transition: .22s cubic-bezier(.4,0,.2,1)
       padding-left: 0
       padding-right: .5em
 
-body.desktop
+body.desktop #{$scope-selector}
 
   .q-toggle:not(.disabled)
     .q-toggle__thumb:before

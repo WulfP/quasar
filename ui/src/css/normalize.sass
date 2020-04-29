@@ -2,13 +2,16 @@
  * Normalizing -- forked from Normalize.css v8
  */
 
-$scope-selector : '.q-scope' !default // FIXME
+// $scope-selector : '.q-scope' !default // FIXME
+
+#{$scope-selector} .normalize
+  margin: 0
 
 #{$scope-selector}
-*, *:before, *:after // @stylint ignore
-  box-sizing: inherit
-  -webkit-tap-highlight-color: transparent
-  -moz-tap-highlight-color: transparent
+  *, *:before, *:after // @stylint ignore
+    box-sizing: inherit
+    -webkit-tap-highlight-color: transparent
+    -moz-tap-highlight-color: transparent
 
 #{$scope-selector}
   width: 100%
