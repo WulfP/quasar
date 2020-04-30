@@ -8,7 +8,7 @@ $field-transition-label-right-up: .324s cubic-bezier(.4,0,.2,1)
     background: transparent
     color: $input-autofill-color
 
-.q-field
+#{$scope-selector} .q-field
   font-size: $input-font-size
 
   &--with-bottom
@@ -476,7 +476,7 @@ $field-transition-label-right-up: .324s cubic-bezier(.4,0,.2,1)
   &--square .q-field__control
     border-radius: 0 !important
 
-.q-transition--field-message
+#{$scope-selector} .q-transition--field-message
   &-enter-active,
   &-leave-active
     transition: transform .6s cubic-bezier(.86,0,.07,1), opacity .6s cubic-bezier(.86,0,.07,1)

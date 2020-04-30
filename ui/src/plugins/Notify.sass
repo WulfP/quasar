@@ -1,4 +1,4 @@
-.q-notifications__list
+#{$scope-selector} .q-notifications__list
   z-index: $z-notify
   pointer-events: none
   left: 0
@@ -14,14 +14,14 @@
   &--bottom
     bottom: 0
 
-body.q-ios-padding .q-notifications__list
+body.q-ios-padding #{$scope-selector} .q-notifications__list
   &--center, &--top
     top: $ios-statusbar-height
     top: env(safe-area-inset-top)
   &--center, &--bottom
     bottom: env(safe-area-inset-bottom)
 
-.q-notification
+#{$scope-selector} .q-notification
   box-shadow: $shadow-2
   border-radius: $generic-border-radius
   pointer-events: all
@@ -175,7 +175,7 @@ body.q-ios-padding .q-notifications__list
     bottom: 0
 
 @media (min-width: $breakpoint-sm-min)
-  .q-notification
+  #{$scope-selector} .q-notification
     max-width: 65vw
 
 @keyframes q-notif-badge

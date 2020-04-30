@@ -1,4 +1,4 @@
-.q-textarea
+#{$scope-selector} .q-textarea
 
   .q-field__control
     min-height: 56px
@@ -44,7 +44,7 @@
       .q-field__prefix, .q-field__suffix
         padding-top: 2px
 
-body.mobile .q-textarea,
-.q-textarea.disabled
+body.mobile #{$scope-selector} .q-textarea,
+#{$scope-selector} .q-textarea.disabled
   .q-field__native
     resize: none

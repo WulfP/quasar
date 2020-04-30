@@ -1,6 +1,6 @@
 $radio-transition: .22s cubic-bezier(0,0,.2,1) 0ms
 
-.q-radio
+#{$scope-selector} .q-radio
   vertical-align: middle
 
   &__bg
@@ -68,7 +68,7 @@ $radio-transition: .22s cubic-bezier(0,0,.2,1) 0ms
       padding-left: 0
       padding-right: .5em
 
-body.desktop
+body.desktop #{$scope-selector}
 
   .q-radio:not(.disabled)
     .q-radio__inner:before
